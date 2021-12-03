@@ -1,21 +1,18 @@
 // Desafio 10
 function techList(array, name) {
-  tecnologia = [];
- 
-  for(let i of array.sort()){
+  let tecnologia = [];
+  for (let i of array.sort()) {
     let objeto = {
       tech: i,
-      name: name,
+      name: name
     };
-
-    tecnologia.push(objeto)
+    tecnologia.push(objeto);
   }
 
-  if (array.length === 0){
-    return 'Vazio!'
+  if (array.length === 0) {
+    return 'Vazio!';
   }
-    
-  return tecnologia
+  return tecnologia;
 }
 
 // Desafio 11
@@ -41,28 +38,27 @@ function generatePhoneNumber(array) {
 
 // Desafio 12
 function triangleCheck(LineA, LineB, LineC) {
-  let resultado = false
-
+  let resultado = false;
   if (LineA < (LineB + LineC) && LineA > Math.abs(LineB - LineC) || LineB < (LineA + LineC) && LineB > Math.abs(LineA - LineC) || LineC < (LineA + LineB) && LineC > Math.abs(LineA - LineB)) {
-     resultado = true;
+    resultado = true;
   }
-  return resultado
+  return resultado;
 }
 
 // Desafio 13
 function hydrate(string) {
-   let copos = 0;
-   var numero = string.match(/\d+/g).map(Number);
+  let copos = 0;
+  let numero = string.match(/\d+/g).map(Number);
 
-   for(let i of numero){
-     copos += i
-   }
+  for (let i of numero) {
+    copos += i;
+  }
 
-   if(copos === 1){
-     return copos + ' ' + 'copo de água'
-   }
+  if (copos === 1) {
+    return `${copos} ${'copo de água'}`;
+  }
 
-  return copos + ' ' + 'copos de água'
+  return `${copos} ${'copos de água'}`;
 }
 
 module.exports = {
