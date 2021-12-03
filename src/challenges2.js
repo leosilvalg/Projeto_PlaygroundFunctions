@@ -1,20 +1,35 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(array, name) {
+  tecnologia = [];
+ 
+  for(let i of array.sort()){
+    let objeto = {
+      tech: i,
+      name: name,
+    };
+
+    tecnologia.push(objeto)
+  }
+
+  if (array.length === 0){
+    return 'Vazio!'
+  }
+    
+  return tecnologia
 }
 
 // Desafio 11
 function generatePhoneNumber(array) {
-  var numero = array;
+  var numero = array.replace;
   
-
     if (array.length === 11) {
-      var resultado = array.replace(/(\d{ 2 })(\d{ 5 })(\d{ 4 })/, "($1)-$2-$3");
+      var resultado = array.replace(/(\d{ 2 })(\d{ 5 })(\d{ 4 })/g, "($1)-$2-$3");
     } else 
        return "Array com tamanho incorreto."
     
     return resultado
 }
+
 
 // Desafio 12
 function triangleCheck(LineA, LineB, LineC) {
