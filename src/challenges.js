@@ -37,22 +37,28 @@ function footballPoints(wins, ties) {
 
   let empates = ties * 1;
 
-  return vitorias + empates
+  return vitorias + empates;
 }
 
 // Desafio 6
-function highestCount(array) {
-  let lista = array[0];
-  let contador = 0;
 
+function counting(array) {
+  // Criando uma primeira função para realizar a listagem dos numeros repetidos dentro do array fornecido. O Loop for vai percorrer cada item do array, de um em um, sendo que o maior indice será salvo na variável lista.
+  let lista = array[0];
   for (let i = 1; i < array.length; i += 1) {
     if (array[i] > lista) {
       lista = array[i];
     }
   }
+  return lista;
+}
 
+function highestCount(array) {
+  // Foi criada um segunda função para fins de complexidade. Na segunda foi realizada a contagem de vezes que o item repetido aparece. Para cada indice do array, aquele que for igual ao maior indice já verificado na função anterior o contador irá acumular um valor.
+  let contador = 0;
+  let resultado = counting(array);
   for (let i of array) {
-    if (i === lista) {
+    if (i === resultado) {
       contador += 1;
     }
   }
