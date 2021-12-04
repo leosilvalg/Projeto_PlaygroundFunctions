@@ -23,13 +23,14 @@ function generatePhoneNumber(array) {
     }
     for(let i in array){
       for(let key in array){
-        if(array[i] === array[key])
+        if(array[i] === array[key]){
           contador += 1
+        }
       if (array[i] > 9 || array[i] < 0 || contador >= 3){
       return 'não é possível gerar um número de telefone com esses valores'
       }
       }
-      contador = 0
+      contador = 0;
     }
     let numero = array.join('');
     let numeroFormatado = numero.replace(/(\d{2})?(\d{5})?(\d{4})/, '($1) $2-$3');
