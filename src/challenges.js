@@ -112,13 +112,13 @@ function encode(string) {
   for (let i = 0; i < string.length; i += 1) {
     if (string[i] === 'a') {
       array[i] = '1';
-    } else if (string[i] === 'e'){
+    } else if (string[i] === 'e') {
       array[i] = '2';
-    } else if (string[i] === 'i'){
+    } else if (string[i] === 'i') {
       array[i] = '3';
-    } else if (string[i] === 'o'){
+    } else if (string[i] === 'o') {
       array[i] = '4';
-    } else if (string[i] === 'u'){
+    } else if (string[i] === 'u') {
       array[i] = '5';
     } else {
       array[i] = string[i];
@@ -135,13 +135,13 @@ function decode(stringCripto) {
   for (let i = 0; i < stringCripto.length; i += 1) {
     if (stringCripto[i] === '1') {
       array[i] = 'a';
-    } else if (stringCripto[i] === '2'){
+    } else if (stringCripto[i] === '2') {
       array[i] = 'e';
-    } else if (stringCripto[i] === '3'){
+    } else if (stringCripto[i] === '3') {
       array[i] = 'i';
-    } else if (stringCripto[i] === '4'){
+    } else if (stringCripto[i] === '4') {
       array[i] = 'o';
-    } else if (stringCripto[i] === '5'){
+    } else if (stringCripto[i] === '5') {
       array[i] = 'u';
     } else {
       array[i] = stringCripto[i];

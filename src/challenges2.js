@@ -19,22 +19,22 @@ function techList(array, name) {
 function generatePhoneNumber(array) {
     let contador = 0;
     if (array.length !== 11) {
-      return 'Array com tamanho incorreto.'
+      return 'Array com tamanho incorreto.';
     }
-    for(let i in array){
-      for(let key in array){
-        if(array[i] === array[key]){
-          contador += 1
+    for(let i in array) {
+      for(let key in array) {
+        if(array[i] === array[key]) {
+          contador += 1;
         }
-      if (array[i] > 9 || array[i] < 0 || contador >= 3){
-      return 'não é possível gerar um número de telefone com esses valores'
+      if (array[i] > 9 || array[i] < 0 || contador >= 3) {
+      return 'não é possível gerar um número de telefone com esses valores';
       }
       }
       contador = 0;
     }
     let numero = array.join('');
     let numeroFormatado = numero.replace(/(\d{2})?(\d{5})?(\d{4})/, '($1) $2-$3');
-    return numeroFormatado
+    return numeroFormatado;
 }
 
 // Desafio 12
